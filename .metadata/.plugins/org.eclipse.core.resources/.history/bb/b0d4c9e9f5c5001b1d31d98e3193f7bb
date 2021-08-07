@@ -1,0 +1,22 @@
+package br.com.tds.fiap.view;
+
+import javax.swing.JOptionPane;
+
+public class TesteLocalidade {
+	
+	public static void main(String[] args) {
+		
+		String nome = JOptionPane.showInputDialog("Digite o nome da localidade: ");
+		
+		double area = Double.parseDouble(JOptionPane.showInputDialog("Digite a area da localidade: "));
+		
+		double habitantes = Double.parseDouble(JOptionPane.showInputDialog("Digite a quantidade de habitantantes da localidade: "));
+		
+		
+		
+		
+		
+		
+	}
+
+}

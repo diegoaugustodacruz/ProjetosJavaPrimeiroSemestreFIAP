@@ -1,0 +1,187 @@
+package br.com.tds.fiap.bean;
+
+public class DicasUteis {
+
+	private String quandoIr,fusoHorario,idioma,tipoTomada,moeda,bagagem,comoSeLocomover;
+	private double temperaturaMediaAnual, moedaReais;
+	private int tempoMedioPermanencia,voltagem;
+	private DocumentosNecessarios documentosNecessarios;
+	
+	
+	//Construtores
+	
+	public DicasUteis(String quandoIr, String fusoHorario, String idioma, String tipoTomada, String moeda,
+			String bagagem, String comoSeLocomover, double temperaturaMediaAnual, int tempoMedioPermanencia,
+			int voltagem, DocumentosNecessarios documentosNecessarios, double moedaReais) {
+		this.quandoIr = quandoIr;
+		this.fusoHorario = fusoHorario;
+		this.idioma = idioma;
+		this.tipoTomada = tipoTomada;
+		this.moeda = moeda;
+		this.bagagem = bagagem;
+		this.comoSeLocomover = comoSeLocomover;
+		this.temperaturaMediaAnual = temperaturaMediaAnual;
+		this.tempoMedioPermanencia = tempoMedioPermanencia;
+		this.voltagem = voltagem;
+		this.documentosNecessarios = documentosNecessarios;
+		this.moedaReais = moedaReais;
+	}
+	public DicasUteis() {
+		
+	}
+	//Métodos gets e sets
+
+
+	public String getQuandoIr() {
+		return quandoIr;
+	}
+
+
+	public void setQuandoIr(String quandoIr) {
+		this.quandoIr = quandoIr;
+	}
+
+
+	public String getFusoHorario() {
+		return fusoHorario;
+	}
+
+
+	public void setFusoHorario(String fusoHorario) {
+		this.fusoHorario = fusoHorario;
+	}
+
+
+	public String getIdioma() {
+		return idioma;
+	}
+
+
+	public void setIdioma(String idioma) {
+		this.idioma = idioma;
+	}
+
+
+	public String getTipoTomada() {
+		return tipoTomada;
+	}
+
+
+	public void setTipoTomada(String tipoTomada) {
+		this.tipoTomada = tipoTomada;
+	}
+
+
+	public String getMoeda() {
+		return moeda;
+	}
+
+
+	public void setMoeda(String moeda) {
+		this.moeda = moeda;
+	}
+
+
+	public String getBagagem() {
+		return bagagem;
+	}
+
+
+	public void setBagagem(String bagagem) {
+		this.bagagem = bagagem;
+	}
+
+
+	public String getComoSeLocomover() {
+		return comoSeLocomover;
+	}
+
+
+	public void setComoSeLocomover(String comoSeLocomover) {
+		this.comoSeLocomover = comoSeLocomover;
+	}
+
+
+	public double getTemperaturaMediaAnual() {
+		return temperaturaMediaAnual;
+	}
+
+
+	public void setTemperaturaMediaAnual(double temperaturaMediaAnual) {
+		this.temperaturaMediaAnual = temperaturaMediaAnual;
+	}
+
+
+	public int getTempoMedioPermanencia() {
+		return tempoMedioPermanencia;
+	}
+
+
+	public void setTempoMedioPermanencia(int tempoMedioPermanencia) {
+		this.tempoMedioPermanencia = tempoMedioPermanencia;
+	}
+
+
+	public int getVoltagem() {
+		return voltagem;
+	}
+
+
+	public void setVoltagem(int voltagem) {
+		this.voltagem = voltagem;
+	}
+
+
+	public DocumentosNecessarios getDocumentosNecessarios() {
+		return documentosNecessarios;
+	}
+
+
+	public void setDocumentosNecessarios(DocumentosNecessarios documentosNecessarios) {
+		this.documentosNecessarios = documentosNecessarios;
+	}
+	
+	
+	public double getMoedaReais() {
+		return moedaReais;
+	}
+
+
+	public void setMoedaReais(double moedaReais) {
+		this.moedaReais = moedaReais;
+	}
+	
+	
+	//Métodos específicos 
+	@Override
+	public String toString() {
+		return "DICAS UTEIS: \nquando ir =" + quandoIr + "\nfuso horario =" + fusoHorario + "\nidioma =" + idioma
+				+ "\ntipo tomada =" + tipoTomada + "\nmoeda =" + moeda + "\nbagagem =" + bagagem + "\ncomo se locomover ="
+				+ comoSeLocomover + "\ntemperatura media anual =" + temperaturaMediaAnual + "\ntempo medio permanencia ="
+				+ tempoMedioPermanencia + "\nvoltagem =" + voltagem + "\ndocumentos necessarios =" + documentosNecessarios.toString();
+	}
+		
+	
+	public double conversorMoeda(double moedaLocal) {
+		if(moeda.toUpperCase().equals("DOLAR")) {
+			moedaLocal = moedaReais/5;
+			
+		}else if (moeda.toUpperCase().equals("EURO"))	{
+			moedaLocal = moedaReais/6.16;
+			
+		}else if (moeda.toUpperCase().equals("LIBRA"))	{
+			moedaLocal = moedaReais/7.16;
+			
+		}
+		return moedaLocal;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}
